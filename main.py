@@ -147,6 +147,15 @@ def keyboard(key, x, y):
     elif key == b'2':
         # Ejemplo: mover de B a A
         iniciar_movimiento(A=( 2.0, 0.0, 0.0), B=(-2.0, 0.0, 0.0), duracion_seg=3.0)
+    elif key == b'3':
+        # Traslada el cubo a una nueva posición
+        cubo.trasladar((1.0, 0.0, 0.0))
+    elif key == b'4':
+        # Rota el cubo sobre su centro
+        cubo.rotar((0.0, 45.0, 0.0))
+    elif key == b'5':
+        # Rota el cubo alrededor del origen como pivote
+        cubo.rotacion_por_pivote((0.0, 0.0, 0.0), (0.0, 45.0, 0.0))
 
 def main():
     global cubo
